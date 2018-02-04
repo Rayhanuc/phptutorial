@@ -26,7 +26,8 @@ $output = new sub();
 
 echo $output -> display();
 echo "<br>";
-echo $output -> age();
+echo $output -> age
+();
 
 
 
