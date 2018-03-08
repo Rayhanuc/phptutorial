@@ -39,6 +39,14 @@ public function insert($query){
 		return false;
 	}
 }
+public function select($query){
+	$select = $this->link->query($query) or die($this->link->error.__Line__);
+	if($select->num_rows > 0 ){
+		return $select;
+	}else {
+		return false;
+	}
+}
 
 }
 
