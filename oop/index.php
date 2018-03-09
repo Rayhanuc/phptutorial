@@ -16,10 +16,26 @@ $mname = $_POST['mname'];
 // if($name == '' || )
 
 
-  if( $name == ''|| $age == '' || $roll == '' || $fname == '' || $mname == ''){
- $error = "<h2 style ='color:red;font-size: 13px;position:relative;left:99px;top:0px'>Field empty!</h2>";
-}
+//   if( $name == ''|| $age == '' || $roll == '' || $fname == '' || $mname == ''){
+//  $error = "<h2 style ='color:red;font-size: 13px;position:relative;left:99px;top:0px'>Field empty!</h2>";
+// }
 
+$name_msg = '';
+$age_msg = '';
+$roll_msg = '';
+$fname_msg = '';
+$mname_msg = '';
+if(empty($name)){
+  $name_msg = "<h3 style='color:red; left: 150px;position: absolute;top: 115px;font-size: 16px;'>Name Field Empty</h3>";
+}elseif (empty($age)) {
+  $age_msg = "<h3 style='color:red; left: 150px;position: absolute;top: 189px;font-size: 16px;'>Age Field Empty</h3>";
+}elseif (empty($roll)) {
+  $roll_msg = "<h3 style='color:red; left: 160px;position: absolute;top:263px;font-size: 16px;'>Roll Field Empty</h3>";
+}elseif (empty($fname)) {
+  $fname_msg = "<h3 style='color:red;  left: 200px;position: absolute;top: 337px;font-size: 16px;'>Father's Name Field Empty</h3>";
+}elseif (empty($mname)) {
+  $mname_msg = "<h3 style='color:red;  left: 200px;position: absolute;top: 411px;font-size: 16px;'>Mother's Name Field Empty</h3>";
+}
 
 else {
   $query = "INSERT INTO student(name,age,roll,fname,mname) VALUES ('$name','$age','$roll','$fname','$mname')";
@@ -69,26 +85,46 @@ else {
     ?></h2>
     <!-- name -->
     <div class="form-group">
+      <?php if(isset($name_msg)){
+        echo $name_msg;
+      } ; 
+      ?>
       <label for="usr" ">Name:</label>
       <input type="text" class="form-control" id="usr" name="name">
     </div>
     <!-- age -->
     <div class="form-group">
+      <?php if(isset($age_msg)){
+        echo $age_msg;
+      } ; 
+      ?>
       <label for="pwd">Age:</label>
       <input type="text" class="form-control" id="pwd" name="age">
     </div>
     <!-- roll no -->
     <div class="form-group">
+      <?php if(isset($roll_msg)){
+        echo $roll_msg;
+      } ; 
+      ?>
       <label for="roll">Roll no:</label>
       <input type="number" class="form-control" id="roll" name="roll">
     </div>
     <!-- Father Name -->
     <div class="form-group">
+      <?php if(isset($fname_msg)){
+        echo $fname_msg;
+      } ; 
+      ?>
       <label for="fname">Father Name:</label>
       <input type="text" class="form-control" id="fname" name="fname">
     </div>
     <!-- Mother Name -->
     <div class="form-group">
+      <?php if(isset($mname)){
+        echo $mname_msg;
+      } ; 
+      ?>
       <label for="mname">Mother Name:</label>
       <input type="text" class="form-control" id="mname" name="mname">
     </div>

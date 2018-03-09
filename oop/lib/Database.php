@@ -48,6 +48,16 @@ public function select($query){
 	}
 }
 
+
+public function delete($query) {
+	$delete = $this->link->query($query) or die($this->link->error.__Line__);
+	if ($delete) {
+		return $delete;
+	}else {
+		return false;
+	}
+}
+
 }
 
 

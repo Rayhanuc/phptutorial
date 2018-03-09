@@ -28,9 +28,23 @@ $db = new Database();
         <th>Roll No</th>
         <th>Father Name</th>
         <th>Mother Name</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
+      <?php
+      if(isset($_GET['delid'])){
+        $deleteid =$_GET['delid'];
+        $query = "DELETE FROM student WHERE id='$deleteid'";
+        $delete = $db->delete($query);
+        if ($delete) {
+          echo "<span style = 'color: green;font-size: 20px;position: absolute;left: 105px;margin: 60px 0;top: 0;'>Data delete successfully</span>";
+        }else{
+          echo "<span style = 'color: red;font-size:40px'>Data not deleted</span>";
+        }
+      }      
+
+      ?>
 
       <?php
 
@@ -49,6 +63,7 @@ $db = new Database();
         <td><?php echo $result['roll'];?></td>
         <td><?php echo $result['fname'];?></td>
         <td><?php echo $result['mname'];?></td>
+        <td><a href="view.php?delid=<?php echo $result['id'];?>" class="btn btn-danger">Delete</a></td>
       </tr>
 
       <?php }} ?>
