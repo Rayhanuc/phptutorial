@@ -18,7 +18,7 @@ $db = new Database();
 
 <div class="container">
   <h2 style="text-align: center;">Bordered Table</h2>
-  <p style="text-align: center;"><a href="index.php">Student Add:</a></p>
+  <p style="text-align: center;"><a href="index.php" class="btn btn-danger">Student Add:</a></p>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -63,7 +63,10 @@ $db = new Database();
         <td><?php echo $result['roll'];?></td>
         <td><?php echo $result['fname'];?></td>
         <td><?php echo $result['mname'];?></td>
-        <td><a href="view.php?delid=<?php echo $result['id'];?>" class="btn btn-danger">Delete</a></td>
+        <td>
+          <a href="view.php?delid=<?php echo $result['id'];?>" class="btn btn-danger">Delete</a>
+          <a href="edit.php?editid=<?php echo $result['id'];?>" class="btn btn-info">Edit</a>
+        </td>
       </tr>
 
       <?php }} ?>

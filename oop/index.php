@@ -41,7 +41,7 @@ else {
   $query = "INSERT INTO student(name,age,roll,fname,mname) VALUES ('$name','$age','$roll','$fname','$mname')";
   $result = $db->insert($query);
   if($result){
-    echo "<span style = 'color: green;font-size: 20px;position: absolute;left: 105px;margin: 60px 0;top: 25px;'>Data insert successfully</span>";
+    echo "<span style = 'color: green;font-size: 20px;position: absolute;left: 110px;margin: 60px 0;top: 25px;'>Data insert successfully</span>";
   }else{
     echo "<span style = 'color: red;font-size:40px'>Data not inserted</span>";
   }
@@ -69,7 +69,7 @@ else {
 <div class="container">
   <h2 style="text-align: center;">Student Management</h2>
   <p style="text-align: center;">The form below contains two input elements; one of type text and one of type password:</p>
-  <p style="text-align: center;"><a href="view.php">View Studend Data</a></p>
+  <p style="text-align: center;"><a href="view.php" class="btn btn-danger">View Student Data</a></p>
 
 
   <form action="" method="post">

@@ -1,72 +1,70 @@
 <?php
 
-/**
-* Database
-*/
-class Database {
+class Database{
 
-public $host   = DB_HOST;
-public $user   = DB_USER;
-public $pass   = DB_PASS;
-public $dbname = DB_NAME;
-
+public $host 	= DB_HOST;
+public $user 	= DB_USER;
+public $pass 	= DB_PASS;
+public $dbname 	= DB_NAME;
 
 public $link;
 public $error;
 
-//magic mathod applyed
 public function __construct(){
-$this->connectDB();
-}
+	$this->connectDB();
+	}
+
+
 
 
 public function connectDB(){
 
 $this->link = new mysqli($this->host,$this->user,$this->pass,$this->dbname);
-if(!$this->link){
-	$this->error = "Connection Faild";
+if (!$this->link){
+$this->error = "Connection Faild";
+return false;
+	}
 
-	return false;
- }
-}
-
+  }
 
 public function insert($query){
 	$insert = $this->link->query($query) or die($this->link->error.__Line__);
-	if ($insert){
+	if($insert){
 		return $insert;
-	}else {
-		return false;
+		}else {
+			return false;
+		}
 	}
-}
+
 public function select($query){
 	$select = $this->link->query($query) or die($this->link->error.__Line__);
 	if($select->num_rows > 0 ){
 		return $select;
-	}else {
-		return false;
+		}else {
+			return false;
+		}
 	}
-}
 
-
-public function delete($query) {
+public function delete($query){
 	$delete = $this->link->query($query) or die($this->link->error.__Line__);
-	if ($delete) {
+	if($delete){
 		return $delete;
-	}else {
-		return false;
+		}else {
+			return false;
+		}
 	}
-}
-public function update($query) {
+public function update($query){
 	$update = $this->link->query($query) or die($this->link->error.__Line__);
-	if ($update) {
+	if($update){
 		return $update;
-	}else {
-		return false;
+		}else {
+			return false;
+		}
 	}
-}
 
 }
+
+
 
 
 ?>
