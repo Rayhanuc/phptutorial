@@ -1,6 +1,7 @@
 (function($){
 
 $('.userregistration').submit(function(){
+
 	var firstname = jQuery("input[name='first_name']").val();
 	var lastname = jQuery("input[name='last_name']").val();
 	var email = jQuery("input[name='email']").val();
@@ -12,10 +13,11 @@ $('.userregistration').submit(function(){
 		'type': 'post',
 		'data': {
 
-			'firstname': firstname,
-			'lastname': lastname,
+			'first_name': firstname,
+			'last_name': lastname,
 			'email': email,
 			'password': password,
+			'register': 'ase',
 		},
 		'success': function(output){
 			jQuery('.success').html(output);

@@ -1,7 +1,7 @@
 <?php
 
 include('config.php');
-if(isset($_POST['registration'])) {
+if(isset($_POST['register'])) {
 	$firstname = $_POST['first_name'];
 	$lastname = $_POST['last_name'];
 	$email = $_POST['email'];
