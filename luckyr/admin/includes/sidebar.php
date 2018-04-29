@@ -1,39 +1,16 @@
+
+
 <!--sidebar start-->
             <aside id="aside" class="ui-aside">
                 <ul class="nav" ui-nav>
                     <li class="nav-head">
                         <h5 class="nav-title text-uppercase light-txt">Navigation</h5>
                     </li>
-                    <li class="active">
-                        <a href=""><i class="fa fa-home"></i><span>Dashboard</span><i class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="nav nav-sub nav-sub--open">
-                            <li class="nav-sub-header"><a href=""><span>Dashboard</span></a></li>
-                            <li class="active"><a href="index.html"><span>Dashboard 1</span></a></li>
-                            <li><a href="dashboard-horizontal-nav.html"><span>Dashboard 2 <small class="label label-danger">TopNav</small></span></a></li>
-                            <li><a href="dashboard-compact.html"><span>Dashboard 3 <small class="label label-success">Sm Nav</small></span></a></li>
-                            <li><a href="dashboard-mega-dropdown.html"><span>Dashboard 4 <small class="label label-primary">eCom..</small></span></a></li>
-                            <li><a href="dashboard-lightsidebar.html"><span>Dashboard 5 <small class="label label-info">Light</small></span></a></li>
-                        </ul>
-                    </li>
+
+
 
                     <li>
-                        <a href=""><i class="fa fa-shopping-cart"></i><span>eCommerce</span><i class="fa fa-angle-right pull-right"></i></a>
-                        <ul class="nav nav-sub">
-                            <li class="nav-sub-header"><a href=""><span>eCommerce</span></a></li>
-                            <li><a href="ecommerce-dashboard.html"><span>Dashboard</span></a></li>
-                            <li><a href="ecommerce-orders.html"><span>Orders</span></a></li>
-                            <li><a href="ecommerce-orders-view.html"><span>Order View</span></a></li>
-                            <li><a href="ecommerce-products.html"><span>Products</span></a></li>
-                            <li><a href="ecommerce-product-edit.html"><span>Products Edit</span></a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-head">
-                        <h5 class="nav-title text-uppercase light-txt">Layouts</h5>
-                    </li>
-
-                    <li>
-                        <a href=""><i class="fa fa-server"></i><span>Page Layouts</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <a href="add-post.php"><i class="fa fa-server"></i><span>Add Blog Post</span><i class="fa fa-angle-right pull-right"></i></a>
                         <ul class="nav nav-sub">
                             <li class="nav-sub-header"><a href=""><span>Page Layouts</span></a></li>
                             <li><a href="layout-blank.html"><span>Blank</span></a></li>

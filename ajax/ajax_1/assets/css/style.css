@@ -1,0 +1,68 @@
+body {background-color: #f1f1f1}
+
+
+.box h2 {
+    text-align: center;
+    top: 15px;
+    position: relative;
+    font-size: 40px;
+    color: red;
+}
+
+.help {
+    margin: 50px 0 0 0;
+    font-size: 40px;
+    color: #ff7600;
+}
+
+.box {
+    width: 40%;
+    height: 100px;
+    background: #f7f7f7;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.text-form {
+    margin: 50px auto;
+    height: 200px;
+    width: 200px;
+}
+ 
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}

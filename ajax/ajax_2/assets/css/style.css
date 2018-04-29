@@ -1,0 +1,89 @@
+body {background-color: #42aaaf}
+
+.box {
+    margin: 50px auto;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    margin-top: 200px;
+}
+
+.box input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+}
+
+.box h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: lato;
+    color: #fff;
+}
+
+.box input[type="submit"] {
+    width: 30%;
+    display: inline-block;
+    color: #fff;
+    background: #063f54;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: lato;
+    border-radius: 5px;
+}
+
+.squarebox {
+    background: #fff;
+    width: 529px;
+    height: 299px;
+}
+
+.heading {
+    background: #44e4c7;
+    display: inline-block;
+    width: 400px;
+    padding: 10px;
+    margin: 40px auto;
+    height: 50px;
+    padding-top: 50px;
+}
+
+/*==================================================
+ * shadow 2
+ * ===============================================*/
+.shadow2
+{
+  position: relative;
+}
+.shadow2:before, .shadow2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.shadow2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}

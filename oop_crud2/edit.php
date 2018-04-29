@@ -46,13 +46,14 @@ if($update){
 <body>
 
 
-<div  style="background-image: url(library-books.jpg);">
+<div  style="background-image: url(library-books.jpg); position: absolute;width: 100%; ">
   <h1 style="text-align: center; color: red;margin: 50px 0;padding: 200px;font-size: 60px; font-weight: 700;text-shadow: 10px 4px 12px black;">PHP & OOP Edit</h1>
 </div>
 
-<div class="container">
+<div class="container" style="position: relative; left: 0; top: 650px;">
 
-  <h2 style="text-align: center;font-family: rubik one; color: #43967f;" >PHP & OOP batch: Student Management</h2>
+
+  <h2 style="text-align: center;font-family: rubik one; color: #43967f; " > PHP & OOP batch: Student Management</h2>
   <p style="text-align: center; margin-bottom: 70px;">The form below contains five input elements; Input elements are Name, Age, Blood Group, Address and Qualification:</p>
   <p style="text-align: center; margin-bottom: 70px;"><a href="dataview.php" class="btn btn-danger">PHP&OOP Student Data</a></p>
   
