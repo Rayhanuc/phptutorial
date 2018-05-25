@@ -17,9 +17,11 @@ if(isset($_POST['register'])) {
 		$query = $connection->query("INSERT INTO user (firstname,lastname,email,password) VALUES ('$firstname','$lastname','$email','$password')");
 
 		if($query) {
-			echo "<h4>you have been registered successfully</h4>";
+			echo "<h4 style='color: #7bf97b;font-size: 25px;'>You have been registered successfully</h4>";
 		}
 	}
+
+	die();
 
 
 
@@ -61,6 +63,6 @@ if(isset($_POST['register'])) {
 
 
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>

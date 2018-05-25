@@ -1,5 +1,28 @@
 (function($){
 
+	$('.userlogin').submit(function(){
+
+		var email = jQuery("input[name='email']").val();
+		var password = jQuery("input[name='password']").val();
+
+		$.ajax({
+			'url': 'login.php',
+			'type': 'post',
+			'data': {
+				'login': '',
+				'email':email,
+				'password':password,
+			},
+
+			'success': function(output){
+
+			jQuery('.amader-input').val('');
+
+			}
+		});
+		
+	});
+
 $('.userregistration').submit(function(){
 
 	var firstname = jQuery("input[name='first_name']").val();
@@ -20,9 +43,11 @@ $('.userregistration').submit(function(){
 			'register': 'ase',
 		},
 		'success': function(output){
+
 			jQuery('.success').html(output);
+			jQuery('.amader-input').val('');
 		}
-	})
+	});
 
 
 

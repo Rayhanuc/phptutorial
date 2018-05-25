@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+include('helper.php');
+// if(!login()){
+// 	header('location:login.php');
+// }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +39,6 @@
 
 
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
