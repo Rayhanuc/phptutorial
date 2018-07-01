@@ -1,13 +1,33 @@
 (function($){
 
+	jQuery(".sendmessage").submit(function(){
+
+
+			var message = jQuery('.message').val();
+
+
+			$.ajax({
+				'url' : 'chat.php',
+				'type' : 'POST',
+				'data' : {
+					'chatupdate' : '',
+					'message' : message,
+				},
+				'success' : function(output){
+
+
+
+					jQuery(".amader-input").val('');
+				}
+			});			
+			return false;
+		});
+
+
 
 	jQuery(document).ready(function(){
-
-
-
 		
 		jQuery(".userlogin").submit(function(){
-
 
 			var email = jQuery('input[name="email"]').val();
 			var password = jQuery('input[name="password"]').val();
@@ -28,10 +48,7 @@
 				}
 			});
 
-
 		});
-
-
 
 
 

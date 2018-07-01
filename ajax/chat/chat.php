@@ -21,9 +21,29 @@
 </head>
 <body>
 	
-<a class="logout" href="logout.php">Log out</a>
+<a href="logout.php">Log out</a>
+
+
+<?php
+
+if(isset($_POST['chatupdate'])){
+		
+	$email = $_SESSION['email'];
+	$message = $_POST['message'];
+
+	$query = $connection->query("INSERT INTO conversation (email, message) VALUES('$email', '$message')");
+
+	
+
+	die();
+}
+
+?>
+
 	<div class="chat box">
 		<div class="squarebox">
+
+			<p class="fullname">Rayhan uddin : Hi</p>
 
 		</div>
 		
